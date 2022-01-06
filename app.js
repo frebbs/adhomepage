@@ -6,7 +6,8 @@ const rootRouter = require('./router/rootRouter');
 
 app.use([
     express.urlencoded({extended: true}),
-    express.json()
+    express.json(),
+    express.static('public')
 ]);
 
 app.set('view engine', 'ejs');
