@@ -1,0 +1,16 @@
+{
+  "name": "adhomepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "prod": "pm2 app.js",
+    "dev": "nodemon -L app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
