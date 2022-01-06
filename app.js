@@ -1,10 +1,18 @@
 const express = require('express');
 const app = express();
+const PORT = 3000 || process.env.PORT
 
-app.get('/', (req, res) => {
-    res.send('<h1>AaronDiable.co.uk Landing page');
-})
+const rootRouter = require('./router/rootRouter');
 
-app.listen('3000', () => {
+app.use([
+    express.urlencoded({extended: true}),
+    express.json()
+]);
+
+app.set('view engine', 'ejs');
+
+app.use('/', rootRouter);
+
+app.listen(PORT, () => {
     console.log('Server running');
-})
+});
