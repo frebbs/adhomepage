@@ -11,6 +11,10 @@ section nav {
     justify-content: space-between;
 }
 
+section .navigation {
+    display: flex;
+}
+
 section nav ul {
     list-style: none;
 }
