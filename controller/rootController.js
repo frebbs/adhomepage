@@ -1,4 +1,7 @@
+const connectionLogger = require('../utils/connectionLogger');
+
 exports.getHomePAge = (req, res) => {
+    connectionLogger.emit('connect', req);
     res.render('index');
 }
 

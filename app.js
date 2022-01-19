@@ -20,6 +20,7 @@ if(process.env.DEVLOPMENT === 'true') {
 
 
 const rootRouter = require('./router/rootRouter');
+const adminRouter = require('./router/adminRouter');
 
 app.use([
     express.urlencoded({extended: true}),
@@ -30,6 +31,7 @@ app.use([
 app.set('view engine', 'ejs');
 
 app.use('/', rootRouter);
+app.use('/admin', adminRouter);
 
 app.listen(PORT, () => {
     console.log('Server running');
