@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const PORT = 3000 || process.env.PORT
-if(process.env.development) {
-    // Client reload
+
+if(process.env.DEVLOPMENT === 'true') {
+    console.log('Running with dev settings')
     const livereload = require("livereload");
     const connectLiveReload = require("connect-livereload");
 
@@ -14,12 +15,11 @@ if(process.env.development) {
     });
 
     app.use(connectLiveReload());
-// End Client reload
 }
 
+
+
 const rootRouter = require('./router/rootRouter');
-const livereload = require("livereload");
-const connectLiveReload = require("connect-livereload");
 
 app.use([
     express.urlencoded({extended: true}),
