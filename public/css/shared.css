@@ -7,6 +7,7 @@ body {
 }
 
 section nav {
+    font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
 }

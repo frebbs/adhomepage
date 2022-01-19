@@ -1,7 +1,19 @@
 const express = require('express');
 const app = express();
 const PORT = 3000 || process.env.PORT
+// Client reload
+const livereload = require("livereload");
+const connectLiveReload = require("connect-livereload");
 
+const liveReloadServer = livereload.createServer();
+liveReloadServer.server.once("connection", () => {
+    setTimeout(() => {
+        liveReloadServer.refresh("/");
+    }, 100);
+});
+
+app.use(connectLiveReload());
+// End Client reload
 const rootRouter = require('./router/rootRouter');
 
 app.use([

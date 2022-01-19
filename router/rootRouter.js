@@ -5,6 +5,7 @@ const rootController = require('../controller/rootController')
 
 router.get('/', rootController.getHomePAge)
 router.get('/about', rootController.getAboutPage)
+router.get('/contact', rootController.getContactPage)
 router.get('/login', rootController.getLoginPage)
 
 module.exports = router;

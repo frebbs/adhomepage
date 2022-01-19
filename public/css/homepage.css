@@ -1,3 +1,38 @@
-.homeSection {
+#homeContent {
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContent {
     text-align: center;
+}
+
+#mainContent h1 {
+    font-size: 5rem;
+}
+
+#mainContent p {
+    font-size: 2rem;
+}
+
+#mainContent {
+    padding: 20px 100px 20px 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 7px wheat;
+    animation-duration: 1s;
+    animation-name: rotateAround;
+
+    /*transform: rotate(180deg) ;*/
+    /*transform-origin: top left;*/
+}
+
+@keyframes rotateAround {
+    from {
+        transform: rotate(0deg) scale(0);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
 }
