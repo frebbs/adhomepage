@@ -1,6 +1,7 @@
 const connectionLogger = require('../utils/connectionLogger');
 
 exports.getHomePAge = (req, res) => {
+    console.log(req.connection.remoteAddress)
     connectionLogger.emit('connect', req);
     res.render('index');
 }
